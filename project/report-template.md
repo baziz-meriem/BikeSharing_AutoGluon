@@ -15,21 +15,21 @@ During the exploratory data analysis (EDA) phase, I discovered that two features
 I also found that various factors such as weather conditions, time of day, and holidays significantly influence bike rental patterns. These insights helped guide the subsequent phases of my analysis and modeling.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-it performed verry well it wend from  rmse score range in rmse score range that's because the models have more features to learn from, and that allowed the model to better capture decision patterns in the data.
+it went from -50.847083 rmse score to  - 84.125061 rmse score range , it's supposed to improve because the models have more features to learn from, and that allowed the model to better capture decision patterns in the data.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-TODO: Add your explanation
+looking at the results it seems that it didn't improve which is shoking for me 
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-Very well;
+exploring in details the trends and figure our which features corrolate and which doesn't do only keep relevant features and then try forecasting it will probably yield better results
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|?|?|?|?|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+|model|time|hyperparams search process|score|
+|--|--|--|--|
+|initial|600|default|1.83850|
+|add_features|600|default|1.84672|
+|hpo|800|tuned|1.86704|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
