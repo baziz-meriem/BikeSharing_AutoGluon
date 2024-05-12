@@ -33,16 +33,18 @@ improvement_percentage =  (-34.374377 + 52.760495 )/|-34.374377 |*100 = 53.487%
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
 
-improvement_percentage =  (-35.065832 + 52.760495 )/|52.777176 |*100 = 33.52%
+improvement_percentage =  (-38.348396 + 52.760495 )/|52.777176 |*100 = 27.31%
 ### If you were given more time with this dataset, where do you think you would spend more time?
 exploring in details the trends and figure our which features corrolate and which doesn't do only keep relevant features and then try forecasting it will probably yield better results
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 
-model|time_limit|eval_metric|hyper_param_process|score
-initial|600|rmse|default|1.80720|
-add_features|600|rmse|default|0.51901|
-hpo|600	|rmse|tuned|0.44409|
+| Model        | Time Limit (s) | Eval Metric | Hyperparameter Process | Score  |
+|--------------|----------------|-------------|------------------------|--------|
+| Initial      | 600            | RMSE        | Default                | 1.80720|
+| Add Features | 600            | RMSE        | Default                | 0.51901|
+| HPO          | 600            | RMSE        | Tuned                  | 0.48045|
+
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
