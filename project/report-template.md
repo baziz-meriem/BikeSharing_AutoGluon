@@ -22,13 +22,13 @@ Initial models lacking these insights performed worse in terms of RMSE. Incorpor
 ### How much better did your model preform after adding additional features and why do you think that is?
 Best Model Details:
 
-Model Name: WeightedEnsemble_L2
-RMSE: 0.41975
+Model Name: WeightedEnsemble_L2  
+RMSE: -34.370879 (This is negative because AutoGluon convert metrics into a format where higher is better, as opposed to lower is better)
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
 looking at the results it seems that it didn't improve which is shoking for me 
-
+improvement_percentage =  (-52.777176 + 34.370879 )/|52.777176 |*100 = -34.87548671%
 ### If you were given more time with this dataset, where do you think you would spend more time?
 exploring in details the trends and figure our which features corrolate and which doesn't do only keep relevant features and then try forecasting it will probably yield better results
 
