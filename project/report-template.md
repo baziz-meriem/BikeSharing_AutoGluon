@@ -10,12 +10,20 @@ The top ranked model was the last model the one I tuned with the hyperparameters
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-During the exploratory data analysis (EDA) phase, I discovered that two features present in the training set were missing from the test set. Additionally, I observed that the 'date' feature was a composite of year, month, day, and hour. To make this information more accessible for modeling, I separated these components into individual features. Furthermore, I introduced a new feature called 'is_peak_hour' to identify peak hours, hypothesizing that these times would likely see increased demand.
+Key Discoveries from EDA:
 
-I also found that various factors such as weather conditions, time of day, and holidays significantly influence bike rental patterns. These insights helped guide the subsequent phases of my analysis and modeling.
+Seasonality and Weather Impact: Analysis revealed significant variations in bike rental volumes across different seasons and weather conditions, leading to the inclusion of these features.
+Rush Hour Peaks: Rentals peaked during typical rush hours, prompting us to engineer a feature indicating peak and non-peak hours.
+
+Impact on Model Performance:
+
+Initial models lacking these insights performed worse in terms of RMSE. Incorporating features that captured temporal dynamics and treated weather conditions as a categorical feature directly improved model accuracy.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-it went from -50.847083 rmse score to  - 84.125061 rmse score range , it's supposed to improve because the models have more features to learn from, and that allowed the model to better capture decision patterns in the data.
+Best Model Details:
+
+Model Name: WeightedEnsemble_L2
+RMSE: 0.41975
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
@@ -27,9 +35,9 @@ exploring in details the trends and figure our which features corrolate and whic
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 |model|time|hyperparams search process|score|
 |--|--|--|--|
-|initial|600|default|1.83850|
-|add_features|600|default|1.84672|
-|hpo|800|tuned|1.86704|
+|initial|600|default|1.80274|
+|add_features|600|default|0.51901|
+|hpo|1000|tuned|1.80274|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
